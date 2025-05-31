@@ -1,11 +1,11 @@
 package com.alerta_chama.backend.core.services;
 
 import com.alerta_chama.backend.api.dtos.UserRegistrationRequest;
-import com.alerta_chama.backend.domain.User;
+import com.alerta_chama.backend.model.User;
 import com.alerta_chama.backend.infra.data.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.crypto.password.PasswordEncoder; // Importe esta classe
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 

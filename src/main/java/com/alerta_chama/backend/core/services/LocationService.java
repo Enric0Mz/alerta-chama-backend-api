@@ -2,7 +2,7 @@ package com.alerta_chama.backend.core.services;
 
 import com.alerta_chama.backend.api.dtos.LocationRequest;
 import com.alerta_chama.backend.model.Location;
-import com.alerta_chama.backend.domain.User;
+import com.alerta_chama.backend.model.User;
 import com.alerta_chama.backend.infra.data.repositories.LocationRepository;
 import com.alerta_chama.backend.infra.data.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

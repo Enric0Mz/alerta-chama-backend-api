@@ -1,7 +1,7 @@
 package com.alerta_chama.backend.api.controllers;
 
 import com.alerta_chama.backend.core.services.SensorDataService;
-import com.alerta_chama.backend.domain.SensorData;
+import com.alerta_chama.backend.model.SensorData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,15 +22,13 @@ public class SensorDataController {
 
     @PostMapping
     public ResponseEntity<SensorData> receiveSensorData(@RequestBody SensorData sensorData) {
+        // AQUI ESTÁ A MUDANÇA: O método saveSensorData no serviço já faz a análise de risco e atualiza o status
         SensorData savedData = sensorDataService.saveSensorData(sensorData);
-        String risk = sensorDataService.analyzeRisk(savedData);
-        savedData.setStatus(risk);
-        sensorDataService.saveSensorData(savedData);
 
         return new ResponseEntity<>(savedData, HttpStatus.CREATED); // Retorna 201 Created
     }
 
-    @GetMapping // Mapeia requisições GET para /api/sensor-data
+    @GetMapping
     public ResponseEntity<List<SensorData>> getAllSensorData() {
         List<SensorData> data = sensorDataService.getAllSensorData();
         return new ResponseEntity<>(data, HttpStatus.OK);

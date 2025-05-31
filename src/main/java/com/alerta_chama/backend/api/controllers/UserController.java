@@ -3,7 +3,7 @@ package com.alerta_chama.backend.api.controllers;
 import com.alerta_chama.backend.api.dtos.UserRegistrationRequest;
 import com.alerta_chama.backend.api.dtos.UserResponse;
 import com.alerta_chama.backend.core.services.UserService;
-import com.alerta_chama.backend.domain.User;
+import com.alerta_chama.backend.model.User;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -10,6 +10,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
+import com.alerta_chama.backend.model.User;
+
 @Entity
 @Data
 @NoArgsConstructor

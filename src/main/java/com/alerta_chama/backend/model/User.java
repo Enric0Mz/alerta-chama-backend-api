@@ -1,4 +1,4 @@
-package com.alerta_chama.backend.domain;
+package com.alerta_chama.backend.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

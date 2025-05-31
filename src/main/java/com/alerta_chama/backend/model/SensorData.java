@@ -1,6 +1,6 @@
-package com.alerta_chama.backend.domain;
+package com.alerta_chama.backend.model;
 
-import jakarta.persistence.Entity; // Use jakarta.persistence para Spring Boot 3+
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
